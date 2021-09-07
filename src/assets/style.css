@@ -24,7 +24,7 @@ body {
     height: 100vh;
     background: var(--background);
     color: var(--text-color);
-    transition: 1s background ease;
+    transition: 3s background ease;
 }
 
 .dark-mode {
@@ -66,22 +66,32 @@ body {
 /* icon-end */
 
 .siteHeader {
-    padding: 48px;
+    padding: 48px 64px;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.siteHeader .login {
-    width: 40px;
-    text-align: center;
+.box-shadow {
+    box-shadow: 1px -1px 0 #767676,
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #7b7a7a,
+    -5px 10px 1px #7f7d7d;
 }
 
 .siteHeader h1 {
+    font-size: 64px;
     width: 100%;
     text-align: center;
+    text-shadow: 1px -1px 0 #767676,
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #7b7a7a,
+    -5px 10px 1px #7f7d7d;
 }
 
 .siteHeader .add {
@@ -93,33 +103,59 @@ body {
     text-align: center;
 }
 
+
 .siteMain .search .searchForm {
+    margin: 10px;
+    padding: 0 16px;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
-    line-height: 40px;
-    margin: 20px;
-    border: 2px solid #18a0fb;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #000;
+    border: 2px solid #f7f7f7;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.searchForm:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+}
+
+.searchForm:hover:after {
+    width: 100%;
+    left: 0;
 }
 
 .searchForm .submit {
-    width: 30px;
-    height: 30px;
-    margin-right: 4px;
-    border-radius: 50%;
-    border: none;
-    background-color: #18a0fb;
-    color: white;
+    color: var(--text-color);
+    background: inherit;
+    font-size: 24px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 2px solid #f7f7f7;
+    outline: none;
 }
 
 .searchForm .searchInput {
+    font-size: 20px;
+    padding: 16px;
+    height: 48px;
+    line-height: 48px;
     flex-grow: 1;
-    margin-left: 20px;
     border: none;
     outline: none;
+    background: inherit;
+    color: var(--text-color);
 }
 
 .siteList {
@@ -140,9 +176,8 @@ body {
     align-items: center;
     width: 145px;
     height: 94px;
-    background-color: #f3f3f3;
+    background: var(--background-color);
     border-radius: 16px;
-    box-shadow: 5px 5px 5px #000;
 }
 
 .siteList .logo img {

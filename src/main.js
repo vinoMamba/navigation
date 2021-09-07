@@ -19,8 +19,8 @@ const render = () => {
     $(".siteList").find("li").remove();
     hashMap.forEach((node) => {
         $(`
-      <li>
-          <a href="${node.url}">
+      <li >
+          <a href="${node.url}" class="box-shadow">
               <div class="logo">
                   <img src="${node.url}/favicon.ico">
               </div>
