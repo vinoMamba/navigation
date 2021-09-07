@@ -24,13 +24,39 @@ body {
     height: 100vh;
     background: var(--background);
     color: var(--text-color);
+    transition: 1s background ease;
+}
+
+.dark-mode {
+    position: relative;
+    border-radius: 50px;
+    color: var(--text-color);
+    width: 70px;
+    height: 30px;
+    background-color: white;
+}
+
+.dark-switch {
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: var(--background-color);
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.dark-switch-checked {
+    transform: translateX(30px);
 }
 
 
 /* icon-start */
 .icon {
-    width: 1em;
-    height: 1em;
+    width: 1.1em;
+    height: 1.1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
@@ -40,8 +66,7 @@ body {
 /* icon-end */
 
 .siteHeader {
-    height: 50px;
-    line-height: 50px;
+    padding: 48px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

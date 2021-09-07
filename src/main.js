@@ -41,6 +41,13 @@ $("#cancel").on("click", () => {
 });
 
 $("#darkMode").on("click", () => {
+    $(".dark-switch").toggleClass('dark-switch-checked')
+    const $svg = $(".dark-switch use")
+    if ($(".dark-switch").hasClass('dark-switch-checked')) {
+        $svg.attr("xlink:href", '#icon-dark')
+    } else {
+        $svg.attr("xlink:href", '#icon-light')
+    }
     setModeState()
 })
 
