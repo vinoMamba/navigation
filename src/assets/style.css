@@ -1,0 +1,227 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    height: 100vh;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+
+/* icon-start */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+/* icon-end */
+
+.siteHeader {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siteHeader .login {
+    width: 40px;
+    text-align: center;
+}
+
+.siteHeader h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.siteHeader .add {
+    border: 1px solid white;
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.siteMain .search .searchForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px;
+    border: 2px solid #18a0fb;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.searchForm .submit {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    border-radius: 50%;
+    border: none;
+    background-color: #18a0fb;
+    color: white;
+}
+
+.searchForm .searchInput {
+    flex-grow: 1;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+}
+
+.siteList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.siteList > li {
+    margin-bottom: 12px;
+}
+
+.siteList > li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 94px;
+    background-color: #f3f3f3;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.siteList .logo img {
+    width: 32px;
+    height: 32px;
+    /* border-radius: 50%; */
+}
+
+/* popUp */
+.popUp {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px #000;
+    background-color: #f3f3f3;
+}
+
+.popUp p {
+    height: 20px;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.popUp .siteNameInput,
+.popUp .siteUrlInput {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.popUp label {
+    margin: 10px 0;
+}
+
+.input {
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.popUp .btn {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px;
+    border-radius: 16px;
+}
+
+.popUp button {
+    flex-grow: 1;
+    height: 40px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.popUp #addSite {
+    background-color: #18a0fb;
+    color: white;
+}
+
+.popUp #cancel {
+    background-color: #c4c4c4;
+    color: white;
+}
+
+/* 显示弹出层 */
+.show {
+    display: block;
+}
+
+.red {
+    border-color: red;
+}
+
+@media (min-width: 1025px) {
+    .siteMain .search {
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
+
+    .siteMain .search .searchForm {
+        width: 500px;
+    }
+
+    .content {
+        margin: 100px auto;
+        width: 900px;
+    }
+
+    .siteList {
+        margin-right: -90px;
+        justify-content: flex-start;
+    }
+
+    .siteList > li {
+        margin-right: 90px;
+        margin-bottom: 25px;
+    }
+}

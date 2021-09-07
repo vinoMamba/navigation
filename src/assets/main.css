@@ -1,0 +1,10 @@
+:root {
+    --background-color: #ddd5c1;
+    --text-color: #131417;
+    --background: linear-gradient(180deg, rgba(221, 213, 193, 1) 0%, rgba(124, 143, 152, 1) 100%);
+}
+
+[data-theme="darkMode"] {
+    --background: #131417;
+    --text-color: #fafafa;
+}

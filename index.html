@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>sz~dm~ua</title>
+</head>
+<body>
+<main class="siteMain">
+    <header class="siteHeader">
+        <div class="login" id="darkMode">
+            <svg class="icon">
+                <use xlink:href="#icon-nav"/>
+            </svg>
+        </div>
+        <h1>sz~dm~ua</h1>
+        <div class="add" id="add">
+            <svg class="icon">
+                <use xlink:href="#icon-add">
+                </use>
+            </svg>
+        </div>
+    </header>
+    <div class="search">
+        <form action="https://www.baidu.com/s?" class="searchForm">
+            <input type="text" class="searchInput" name="wd">
+            <button type="submit" class="submit">
+                <svg class="icon">
+                    <use xlink:href="#icon-search-right">
+                    </use>
+                </svg>
+            </button>
+        </form>
+    </div>
+    <div class="content">
+        <ul class="siteList">
+            <!-- add siteList -->
+        </ul>
+    </div>
+    <div class="popUp">
+        <p>添加网站</p>
+        <div class="siteNameInput">
+            <label for="urlName">名称</label>
+            <input type="text" name="urlName" id="urlName" class="input">
+        </div>
+        <div class="siteUrlInput">
+            <label for="addUrl">URL</label>
+            <input type="text" name="addUrl" id="addUrl" class="input">
+        </div>
+        <div class='btn'>
+            <button id="addSite">确 定</button>
+            <button id='cancel'>取 消</button>
+        </div>
+    </div>
+</main>
+<script src="//at.alicdn.com/t/font_2048105_5nehwkg6m59.js"></script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
