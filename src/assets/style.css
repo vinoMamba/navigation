@@ -28,6 +28,7 @@ body {
 }
 
 .dark-mode {
+    cursor: pointer;
     position: relative;
     border-radius: 50px;
     color: var(--text-color);
@@ -92,6 +93,10 @@ body {
 }
 
 .siteHeader h1 {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
     font-size: 64px;
     width: 100%;
     text-align: center;
@@ -111,8 +116,8 @@ body {
     display: flex;
 }
 
-
 .searchForm .submit {
+    cursor: pointer;
     color: var(--text-color);
     background: inherit;
     font-size: 24px;
@@ -120,7 +125,14 @@ body {
     border-radius: 4px;
     border: 2px solid #f7f7f7;
     outline: none;
+    transition: all 0.3s ease;
 }
+
+.submit:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
+    transform: translateY(-0.25em);
+}
+
 
 .searchInput {
     margin-right: 4px;
